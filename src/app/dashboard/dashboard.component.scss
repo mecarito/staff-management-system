@@ -1,0 +1,147 @@
+@import '~@nebular/theme/styles/theming';
+@import '~@nebular/theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+@include nb-install-component() {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .logo-container {
+        display: flex;
+        align-items: center;
+        width: calc(#{nb-theme(sidebar-width)} - #{nb-theme(header-padding)});
+    }
+    nb-action {
+        height: auto;
+        display: flex;
+        align-content: center;
+    }
+    nb-user {
+        cursor: pointer;
+    }
+     ::ng-deep nb-search button {
+        padding: 0!important;
+    }
+    .header-container {
+        display: flex;
+        align-items: center;
+        width: auto;
+        .sidebar-toggle {
+            @include nb-ltr(padding-right, 1.25rem);
+            @include nb-rtl(padding-left, 1.25rem);
+            text-decoration: none;
+            color: nb-theme(text-hint-color);
+            nb-icon {
+                font-size: 1.75rem;
+            }
+        }
+        .logo {
+            padding: 0 1.25rem;
+            font-size: 2.0rem;
+            color: #1DA1F2;
+            @include nb-ltr(border-left, 1px solid nb-theme(divider-color));
+            @include nb-rtl(border-right, 1px solid nb-theme(divider-color));
+            white-space: nowrap;
+            text-decoration: none;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        .control-item {
+            display: none;
+        }
+        .user-action {
+            border: none;
+            padding: 0;
+        }
+        .saveandedit {
+            width: 20vw;
+            height: 5vh;
+            background-color: #1DA1F2;
+            color: #ffffff;
+            border-radius: 1vh;
+            border: none;
+            margin-bottom: 2vh;
+        }
+        .nbmiddle2 {
+            display: none;
+        }
+        .nbmiddle {
+            width: 100vw;
+        }
+    }
+    @include media-breakpoint-down(is) {
+        nb-select {
+            display: none;
+        }
+    }
+}
+
+.nbmiddle {
+    width: 64vw;
+}
+
+.nbmiddle2 {
+    width: 16.9vw;
+    background-color: white;
+}
+
+$nb-themes: nb-register-theme(( layout-padding-top: 2.25rem, menu-item-icon-margin: 0 0.5rem 0 0, card-height-tiny: 13.5rem, card-height-small: 21.1875rem, card-height-medium: 28.875rem, card-height-large: 36.5625rem, card-height-giant: 44.25rem, card-margin-bottom: 1.875rem, card-header-with-select-padding-top: 0.5rem, card-header-with-select-padding-bottom: 0.5rem, select-min-width: 6rem, slide-out-background: #f7f9fc, slide-out-shadow-color: 0 4px 14px 0 #8f9bb3, slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3, ), default, default);
+$nb-themes: nb-register-theme(( layout-padding-top: 2.25rem, menu-item-icon-margin: 0 0.5rem 0 0, card-height-tiny: 13.5rem, card-height-small: 21.1875rem, card-height-medium: 28.875rem, card-height-large: 36.5625rem, card-height-giant: 44.25rem, card-margin-bottom: 1.875rem, card-header-with-select-padding-top: 0.5rem, card-header-with-select-padding-bottom: 0.5rem, select-min-width: 6rem, slide-out-background: #252547, slide-out-shadow-color: 2px 0 3px #29157a, slide-out-shadow-color-rtl: -2px 0 3px #29157a, ), cosmic, cosmic);
+$nb-themes: nb-register-theme(( layout-padding-top: 2.25rem, menu-item-icon-margin: 0 0.5rem 0 0, card-height-tiny: 13.5rem, card-height-small: 21.1875rem, card-height-medium: 28.875rem, card-height-large: 36.5625rem, card-height-giant: 44.25rem, card-margin-bottom: 1.875rem, card-header-with-select-padding-top: 0.5rem, card-header-with-select-padding-bottom: 0.5rem, select-min-width: 6rem, slide-out-background: linear-gradient(270deg, #edf1f7 0%, #e4e9f2 100%), slide-out-shadow-color: 0 4px 14px 0 #8f9bb3, slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3, ), corporate, corporate);
+$nb-themes: nb-register-theme(( layout-padding-top: 2.25rem, menu-item-icon-margin: 0 0.5rem 0 0, card-height-tiny: 13.5rem, card-height-small: 21.1875rem, card-height-medium: 28.875rem, card-height-large: 36.5625rem, card-height-giant: 44.25rem, card-margin-bottom: 1.875rem, card-header-with-select-padding-top: 0.5rem, card-header-with-select-padding-bottom: 0.5rem, select-min-width: 6rem, slide-out-background: linear-gradient(270deg, #222b45 0%, #151a30 100%), slide-out-shadow-color: 0 4px 14px 0 #8f9bb3, slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3, ), dark, dark);
+// @include nb-install-component() {
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     .socials {
+//         font-size: 2rem;
+//         a {
+//             padding: 0.4rem;
+//             color: nb-theme(text-hint-color);
+//             transition: color ease-out 0.1s;
+//             &:hover {
+//                 color: nb-theme(text-basic-color);
+//             }
+//         }
+//     }
+//     @include media-breakpoint-down(is) {
+//         .socials {
+//             font-size: 1.5rem;
+//         }
+//     }
+// }
+body {
+    padding: 1vw 0 0 2vw;
+}
+
+h5 {
+    color: #1DA1F2;
+    margin-bottom: 3vh;
+}
+
+form {
+    margin-bottom: 1.8vw;
+}
+
+.space {
+    margin-left: 2.2vw;
+}
+
+.space1 {
+    margin-left: 0.5vw
+}
+
+.buttonspace {
+    margin-left: 3vw;
+}
+
+.saveandedit {
+    width: 8vw;
+    height: 5vh;
+    background-color: #1DA1F2;
+    color: #ffffff;
+    border-radius: 1vh;
+    border: none;
+    margin-bottom: 4vh;
+}

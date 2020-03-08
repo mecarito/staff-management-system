@@ -12,6 +12,12 @@ import { LeavesModule } from './leaves/leaves.module';
 import { InventoryModule } from './inventory/inventory.module';
 import { FypModule } from './fyp/fyp.module';
 import { DashboardhomeModule } from './dashboardhome/dashboardhome.module';
+import { DashboardRoutingModule } from './dashboard-routing.module';
+
+import { NbThemeModule, NbLayoutModule,  NbSidebarModule, NbButtonModule,
+  NbAccordionModule,  NbCardModule, NbIconModule, NbMenuModule, NbActionsModule,
+   NbSearchModule, NbSelectModule, NbUserModule, NbCheckboxModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 
 
@@ -19,6 +25,23 @@ import { DashboardhomeModule } from './dashboardhome/dashboardhome.module';
   declarations: [DashboardComponent],
   imports: [
     CommonModule,
+    DashboardRoutingModule,
+
+    NbSidebarModule,
+    NbThemeModule,
+    NbUserModule,
+    NbMenuModule,
+    NbLayoutModule,
+    NbAccordionModule,
+    NbCardModule,
+    NbActionsModule,
+    NbSearchModule,
+    NbButtonModule,
+    NbSelectModule,
+    NbCheckboxModule,
+    NbIconModule,
+    NbEvaIconsModule,
+
     DashboardhomeModule,
     FypModule,
     InventoryModule,
