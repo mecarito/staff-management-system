@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FypComponent } from './fyp.component';
+import { AcceptedtitlesModule } from './acceptedtitles/acceptedtitles.module';
+import { PastyearprojectsModule } from './pastyearprojects/pastyearprojects.module';
+import { PendingtitlesModule } from './pendingtitles/pendingtitles.module';
+import { ProposetitlesModule } from './proposetitles/proposetitles.module';
 
 
 
 @NgModule({
-  declarations: [FypComponent],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    AcceptedtitlesModule,
+    PastyearprojectsModule,
+    PendingtitlesModule,
+    ProposetitlesModule,
   ]
 })
 export class FypModule { }

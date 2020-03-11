@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReportsComponent } from './reports.component';
+import { MonthlyreportsModule } from './monthlyreports/monthlyreports.module';
+import { QuarterlyreportsModule } from './quarterlyreports/quarterlyreports.module';
+import { UploadreportModule } from './uploadreport/uploadreport.module';
 
 
 
 @NgModule({
-  declarations: [ReportsComponent],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    MonthlyreportsModule,
+    QuarterlyreportsModule,
+    UploadreportModule,
   ]
 })
 export class ReportsModule { }

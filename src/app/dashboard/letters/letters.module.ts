@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LettersComponent } from './letters.component';
+import { ReceivedlettersModule } from './receivedletters/receivedletters.module';
+import { SentlettersModule } from './sentletters/sentletters.module';
 
 
 
 @NgModule({
-  declarations: [LettersComponent],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    ReceivedlettersModule,
+    SentlettersModule,
   ]
 })
 export class LettersModule { }

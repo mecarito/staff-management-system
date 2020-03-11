@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LeavesComponent } from './leaves.component';
+import { AskingleaveModule } from './askingleave/askingleave.module';
+import { PendingleavesModule } from './pendingleaves/pendingleaves.module';
+import { StaffonleaveModule } from './staffonleave/staffonleave.module';
 
 
 
 @NgModule({
-  declarations: [LeavesComponent],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    AskingleaveModule,
+    PendingleavesModule,
+    StaffonleaveModule,
   ]
 })
 export class LeavesModule { }

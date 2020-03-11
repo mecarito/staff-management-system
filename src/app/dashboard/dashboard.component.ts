@@ -12,7 +12,7 @@ import { menu } from './dashboardmenu';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, OnDestroy {
 
 
   constructor(private sidebarService: NbSidebarService,
@@ -49,6 +49,13 @@ export class DashboardComponent implements OnInit {
   currentTheme = 'default';
 
   protected layoutSize$ = new Subject();
+
+  // onChangeLayoutSize(): Observable<any> {
+  //   return this.layoutSize$.pipe(
+  //     share(),
+  //     delay(1),
+  //   );
+  // }
 
 
   ngOnInit() {
@@ -88,6 +95,7 @@ export class DashboardComponent implements OnInit {
 
   toggleSidebar(): boolean {
     this.sidebarService.toggle(true, 'menu-sidebar');
+
     this.changeLayoutSize();
 
     return false;
@@ -95,7 +103,7 @@ export class DashboardComponent implements OnInit {
 
   navigateHome() {
     this.menuService.navigateHome();
-    return false;
+    return true;
   }
 
 

@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TeachingloadComponent } from './teachingload.component';
+import { AddnewcourseModule } from '../professionalcourses/addnewcourse/addnewcourse.module';
+import { AssigncourseModule } from './assigncourse/assigncourse.module';
+import { PastteachingloadModule } from './pastteachingload/pastteachingload.module';
 
 
 
 @NgModule({
-  declarations: [TeachingloadComponent],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    AddnewcourseModule,
+    AssigncourseModule,
+    PastteachingloadModule,
   ]
 })
 export class TeachingloadModule { }

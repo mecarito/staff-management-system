@@ -9,5 +9,6 @@ import { DashboardhomeComponent } from './dashboardhome.component';
   imports: [
     CommonModule
   ]
+
 })
 export class DashboardhomeModule { }

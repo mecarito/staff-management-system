@@ -81,7 +81,7 @@
 }
 
 .nbmiddle2 {
-    width: 16.9vw;
+    width: 15.9vw;
     background-color: white;
 }
 
@@ -111,37 +111,3 @@ $nb-themes: nb-register-theme(( layout-padding-top: 2.25rem, menu-item-icon-marg
 //         }
 //     }
 // }
-body {
-    padding: 1vw 0 0 2vw;
-}
-
-h5 {
-    color: #1DA1F2;
-    margin-bottom: 3vh;
-}
-
-form {
-    margin-bottom: 1.8vw;
-}
-
-.space {
-    margin-left: 2.2vw;
-}
-
-.space1 {
-    margin-left: 0.5vw
-}
-
-.buttonspace {
-    margin-left: 3vw;
-}
-
-.saveandedit {
-    width: 8vw;
-    height: 5vh;
-    background-color: #1DA1F2;
-    color: #ffffff;
-    border-radius: 1vh;
-    border: none;
-    margin-bottom: 4vh;
-}

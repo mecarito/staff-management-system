@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MeetingsComponent } from './meetings.component';
+import { OrganizemeetingsModule } from './organizemeetings/organizemeetings.module';
+import { PastmeetingsModule } from './pastmeetings/pastmeetings.module';
+import { PendingleavesModule } from '../leaves/pendingleaves/pendingleaves.module';
 
 
 
 @NgModule({
-  declarations: [MeetingsComponent],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    OrganizemeetingsModule,
+    PastmeetingsModule,
+    PendingleavesModule,
   ]
 })
 export class MeetingsModule { }

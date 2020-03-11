@@ -1,0 +1,66 @@
+<form>
+    <h5>Organize a meeting</h5>
+
+    <div class="form-row formspace">
+        <div class="form-group col-md-4 ">
+            <label for="inputState "> Coordinators</label>
+            <select id="inputState " class="form-control ">
+                       <option selected>Choose one</option>
+                        <option value="examination">Examination</option>
+                       <option value="postgraduate">Postgraduate</option>
+                       <option value="pdp's">PDP's</option>
+                       <option value="project">Project</option>
+                       <option value="innovation">Research,Publication,innovation</option>
+                </select>
+        </div>
+        <div class="form-group col-md-4 roomNospace">
+            <label for="inputEmail4">Room No:</label>
+            <input type="email" class="form-control " id="inputEmail4" placeholder="Eg:B20">
+        </div>
+    </div>
+</form>
+
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <p>Date</p>
+        <br>
+        <!-- <div class="input-group pickdate">
+            <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+            <div class="input-group-append">
+                <button class="btn calendar" (click)="d.toggle()" type="button">pick</button>
+            </div>
+        </div> -->
+    </div>
+    <!-- <div class="datespace">
+        <p>From</p>
+        <ngb-timepicker [(ngModel)]="time" [meridian]="meridian"></ngb-timepicker>
+    </div>
+    <div class="datespace1">
+        <p>To</p>
+        <ngb-timepicker [(ngModel)]="time2" [meridian]="meridian"></ngb-timepicker>
+    </div> -->
+
+</div>
+
+<form>
+    <div class="form-row formspace ">
+        <div class="form-group col-md-4">
+            <label for="exampleFormControlTextarea1">purpose of the meeting</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="exampleFormControlTextarea1">Agenda</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+        </div>
+    </div>
+    <div class="form-row formspace ">
+        <div class="form-group  col-md-4 choosefile">
+            <label for="exampleFormControlFile1 ">Attachments</label>
+            <input type="file" class="form-control-file " id="exampleFormControlFile1">
+        </div>
+    </div>
+</form>
+<div class="row  formspace ">
+    <button class="saveandedit "> Send invitation </button>
+</div>
