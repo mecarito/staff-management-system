@@ -6,6 +6,7 @@ import { Observable, Subject } from 'rxjs';
 import { delay, share, map, takeUntil  } from 'rxjs/operators';
 
 import { menu } from './dashboardmenu';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -20,8 +21,10 @@ export class DashboardComponent implements OnInit, OnDestroy {
               private themeService: NbThemeService,
               // private userService: UserData,
               // private layoutService: LayoutService,
-              private breakpointService: NbMediaBreakpointsService) {
+              private breakpointService: NbMediaBreakpointsService,
+              private route: Router) {
 }
+
 
 
   menus =  menu;
@@ -105,6 +108,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
     this.menuService.navigateHome();
     return true;
   }
+
+
 
 
 }

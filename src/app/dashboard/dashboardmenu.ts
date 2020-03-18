@@ -4,7 +4,7 @@ export const menu: NbMenuItem[] = [
     {
         title: 'Dashboard',
         icon: 'home-outline',
-        link: '/dashhome',
+        link: 'dashhome',
         home: false,
       },
       {
@@ -14,14 +14,15 @@ export const menu: NbMenuItem[] = [
       {
         title: 'Staff Information',
         icon: 'layout-outline',
+        link: '',
         children: [
           {
             title: 'My Profile',
-            link: '/staffinformation/myprofile',
+            link: 'staffinformation/myprofile',
           },
           {
             title: 'All Profiles',
-            link: '/staffinformation/allprofiles',
+            link: 'staffinformation/allprofiles',
           }
         ],
       },
@@ -31,15 +32,15 @@ export const menu: NbMenuItem[] = [
         children: [
           {
             title: 'Upload Report',
-            link: '/reports/uploadreport',
+            link: 'reports/uploadreport',
           },
           {
             title: 'Monthly Reports',
-            link: '/reports/monthlyreport',
+            link: 'reports/monthlyreport',
           },
           {
             title: 'Quarterly Reports',
-            link: '/reports/Quarterlyreports',
+            link: 'reports/Quarterlyreports',
           }
         ],
       },
@@ -50,15 +51,15 @@ export const menu: NbMenuItem[] = [
         children: [
           {
             title: 'Add/delete Course ',
-            link: '/teachingload/addcourse',
+            link: 'teachingload/addcourse',
           },
           {
             title: 'Assign Course',
-            link: '/teachingload/assingcourse',
+            link: 'teachingload/assingcourse',
           },
           {
             title: 'Past Teaching Load',
-            link: '/teachingload/pasteachingload',
+            link: 'teachingload/pasteachingload',
           }
         ],
       },
@@ -68,15 +69,15 @@ export const menu: NbMenuItem[] = [
         children: [
           {
             title: 'Organize a meeting',
-            link: '/meetings/organizemeeting',
+            link: 'meetings/organizemeeting',
           },
           {
             title: 'Pending meetings',
-            link: '/meetings/pendingmeetings',
+            link: 'meetings/pendingmeetings',
           },
           {
             title: 'Past meetings',
-            link: '/meetings/pastmeetings',
+            link: 'meetings/pastmeetings',
           }
         ],
       },
@@ -86,11 +87,11 @@ export const menu: NbMenuItem[] = [
         children: [
           {
             title: 'Sent letters',
-            link: '/letters/sentletters',
+            link: 'letters/sentletters',
           },
           {
             title: 'Received letters',
-            link: '/letters/receivedletters',
+            link: 'letters/receivedletters',
           }
         ],
       },
@@ -100,15 +101,15 @@ export const menu: NbMenuItem[] = [
         children: [
           {
             title: 'Request a leave',
-            link: '/leaves/askforleave',
+            link: 'leaves/askforleave',
           },
           {
             title: 'Pending leaves',
-            link: '/leaves/pendingleaves',
+            link: 'leaves/pendingleaves',
           },
           {
             title: 'Staff on leave',
-            link: '/leaves/staffonleave',
+            link: 'leaves/staffonleave',
           }
         ],
       },
@@ -118,15 +119,15 @@ export const menu: NbMenuItem[] = [
         children: [
           {
             title: 'Add new course',
-            link: '/pdp/addnewcourse',
+            link: 'pdp/addnewcourse',
           },
           {
             title: 'List of courses',
-            link: '/pdp/listofcourses',
+            link: 'pdp/listofcourses',
           },
           {
             title: 'Course history',
-            link: '/pdp/coursehistory',
+            link: 'pdp/coursehistory',
           }
         ],
       },
@@ -136,15 +137,15 @@ export const menu: NbMenuItem[] = [
         children: [
           {
             title: 'Electronics Lab',
-            link: '/inventory/electroniclab',
+            link: 'inventory/electroniclab',
           },
           {
             title: 'Computer Lab',
-            link: '/inventory/computerlab',
+            link: 'inventory/computerlab',
           },
           {
             title: 'Offices',
-            link: '/inventory/offices',
+            link: 'inventory/offices',
           }
         ],
       },
@@ -154,19 +155,19 @@ export const menu: NbMenuItem[] = [
         children: [
           {
             title: 'Propose a title',
-            link: '/fyp/proposetitle',
+            link: 'fyp/proposetitle',
           },
           {
             title: 'Pending titles',
-            link: '/fyp/pendingtitles',
+            link: 'fyp/pendingtitles',
           },
           {
             title: 'Accepted titles',
-            link: '/fyp/acceptedtitles',
+            link: 'fyp/acceptedtitles',
           },
           {
             title: 'Past year projects',
-            link: '/fyp/pastyearprojects',
+            link: 'fyp/pastyearprojects',
           }
         ],
       },
@@ -176,7 +177,7 @@ export const menu: NbMenuItem[] = [
         children: [
           {
             title: 'changing a theme',
-            link: '/settings',
+            link: 'settings',
           },
         ],
       }

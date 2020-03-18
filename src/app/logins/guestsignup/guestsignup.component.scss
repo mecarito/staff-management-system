@@ -1,0 +1,147 @@
+@import '~@nebular/theme/styles/global/breakpoints';
+body {
+    // display: -ms-flexbox;
+    display: flex;
+    // -ms-flex-align: center;
+    // align-items: center;
+    background-color: #dedede;
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-family: 'Source Serif Pro', serif;
+    padding: 10vh;
+}
+
+.container-fluid {
+    height: 80vh;
+    width: 40vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    /* background-size: cover; */
+    background-color: #ffffff;
+    margin: auto auto;
+}
+
+
+/* .container-fluid1 {
+    height: 80vh;
+    width: 38.9vw;
+    display: inline-block;
+    background-image: url(../../images/coco.jpg);
+    background-size: cover;
+} */
+
+// .container-fluid2 {
+//     height: 80vh;
+//     width: 39vw;
+//     background-color: #ffffff;
+//     display: inline-block;
+// }
+button {
+    background-color: #1DA1F2;
+    color: white;
+    border-radius: 1vh;
+    height: 6vh;
+    width: 8vw;
+    border: none;
+    margin-left: 14vw;
+    margin-top: 4vh
+}
+
+.welcometext {
+    color: #1DA1F2;
+    font-size: 3.5vh;
+    margin-top: 6vh;
+    margin-bottom: 3vh;
+    margin-left: 5vw;
+}
+
+// .coverdiv {
+//     margin-left: 1vw;
+//     margin-top: 6vh;
+// }
+.email {
+    width: 30vw;
+    margin-bottom: 2vh;
+}
+
+.password {
+    width: 14vw;
+    margin-bottom: 2vh;
+}
+
+.spacebetween {
+    width: 32vw;
+    margin-left: 3.5vw;
+    margin-top: 2vw;
+}
+
+.emailspace {
+    margin-left: 2.8vw;
+}
+
+.agreespace {
+    margin-left: 9vw;
+}
+
+.already {
+    margin-top: 1vh;
+    margin-left: 9vw;
+}
+
+.loginspan {
+    margin-left: 0.5vw;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #1DA1F2;
+    cursor: pointer;
+}
+
+@include media-breakpoint-down(sm) {
+    .container-fluid {
+        height: 80vh;
+        width: 100%;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        background-color: #ffffff;
+        margin: auto auto;
+        // padding: 10vw;
+    }
+    body {
+        // display: -ms-flexbox;
+        // display: flex;
+        // -ms-flex-align: center;
+        // align-items: center;
+        // background-color: #dedede;
+        // /* font-family: 'Source Sans Pro', sans-serif; */
+        font-family: 'Source Serif Pro', serif;
+        padding: 0;
+    }
+    button {
+        background-color: #1DA1F2;
+        color: white;
+        border-radius: 1vh;
+        height: 5vh;
+        width: 20vw;
+        border: none;
+        margin-left: 2vw;
+        margin-top: 2vh
+    }
+    .emailspace {
+        margin-left: 0;
+    }
+    .email {
+        width: 55vw;
+        margin-bottom: 2vh;
+    }
+    .password {
+        width: 55vw;
+        margin-bottom: 2vh;
+    }
+    .spacebetween {
+        width: 55vw;
+        margin-left: 3.5vw;
+        margin-top: 2vw;
+    }
+    .link {
+        margin-left: 30vw;
+    }
+}

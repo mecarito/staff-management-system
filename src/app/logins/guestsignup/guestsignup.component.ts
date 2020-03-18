@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-guestsignup',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GuestsignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigate(link: string) {
+    switch (link) {
+      case 'signup': {
+    this.route.navigate(['/dashboard']);
+    break;
+     }
+     case 'login': {
+    this.route.navigate(['logins/guestlogin']);
+    break;
+   }
+        }
   }
 
 }

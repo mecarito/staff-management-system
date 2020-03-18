@@ -1,3 +1,4 @@
+@import '~@nebular/theme/styles/global/breakpoints';
 h5 {
     color: #1DA1F2;
     margin-bottom: 5vh;
@@ -25,4 +26,25 @@ h5 {
     border-radius: 1vh;
     border: none;
     margin-bottom: 4vh;
+}
+
+@include media-breakpoint-down(sm) {
+    .saveandedit {
+        width: 18vw;
+        height: 4vh;
+        background-color: #1DA1F2;
+        color: #ffffff;
+        border-radius: 1vh;
+        border: none;
+        margin-bottom: 2vh;
+    }
+    .saveandedit1 {
+        width: 50vw;
+        height: 7vh;
+        background-color: #1DA1F2;
+        color: #ffffff;
+        border-radius: 1vh;
+        border: none;
+        margin-bottom: 4vh;
+    }
 }

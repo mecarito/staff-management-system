@@ -32,14 +32,22 @@ import { PendingtitlesComponent } from './dashboard/fyp/pendingtitles/pendingtit
 import { AcceptedtitlesComponent } from './dashboard/fyp/acceptedtitles/acceptedtitles.component';
 import { PastyearprojectsComponent } from './dashboard/fyp/pastyearprojects/pastyearprojects.component';
 import { SettingsComponent } from './dashboard/settings/settings.component';
+import { GuestloginComponent } from './logins/guestlogin/guestlogin.component';
+import { StudentloginComponent } from './logins/studentlogin/studentlogin.component';
+import { GuestsignupComponent } from './logins/guestsignup/guestsignup.component';
 
 
 const routes: Routes = [
-  {path: '', component: DashboardComponent,
+  {path: 'logins/guestlogin', component: GuestloginComponent },
+  {path: 'logins/stafflogin', component: StaffloginComponent },
+  {path: 'logins/studentlogin', component: StudentloginComponent},
+  {path: 'logins/guestsignup', component: GuestsignupComponent},
+
+  {path: '', component: HomeComponent },
+
+  {path: 'dashboard', component: DashboardComponent,
   children: [
-  {path: 'login', component: StaffloginComponent},
   {path: 'staffinformation/myprofile', component: MyprofileComponent},
-  {path: 'home', component: HomeComponent},
   {path: 'staffinformation/allprofiles', component: AllprofilesComponent},
   {path: 'dashhome', component: DashboardhomeComponent},
   {path: 'reports/uploadreport', component: UploadreportComponent},
@@ -67,8 +75,11 @@ const routes: Routes = [
   {path: 'fyp/acceptedtitles', component: AcceptedtitlesComponent},
   {path: 'fyp/pastyearprojects', component: PastyearprojectsComponent},
   {path: 'settings', component: SettingsComponent}
+]},
+  // { path: 'home',        component: HeroListComponent },
+  // {path: 'home', component: HomeComponent },
+  // { path: '',   redirectTo: '/home', pathMatch: 'full' },
 
-  ]},
 
 {path: '**', component: PagenotfoundComponent}
 ];

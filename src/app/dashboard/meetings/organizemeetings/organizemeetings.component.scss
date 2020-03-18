@@ -1,3 +1,4 @@
+@import '~@nebular/theme/styles/global/breakpoints';
 h5 {
     color: #1DA1F2;
     margin-bottom: 4vh;
@@ -41,4 +42,16 @@ h5 {
 
 .pickdate {
     margin-top: 1.9vh;
+}
+
+@include media-breakpoint-down(sm) {
+    .saveandedit {
+        width: 36vw;
+        height: 5vh;
+        background-color: #1DA1F2;
+        color: #ffffff;
+        border-radius: 1vh;
+        border: none;
+        margin-bottom: 2vh;
+    }
 }
