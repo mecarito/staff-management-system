@@ -48,7 +48,7 @@ export class MyprofileComponent implements OnInit {
                 researchGroup,
                 officeNo,
                 administrativeRole
-            }; 
+            };
 
               return this.myprofileservice.addstaff(hodfil).
               subscribe(data => console.log(data));

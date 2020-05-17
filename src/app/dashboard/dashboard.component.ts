@@ -1,12 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NbMediaBreakpointsService, NbMenuService,
-         NbSidebarService, NbThemeService,  NbCheckboxModule, } from '@nebular/theme';
-
-import { Observable, Subject } from 'rxjs';
-import { delay, share, map, takeUntil  } from 'rxjs/operators';
-
+         NbSidebarService, NbThemeService } from '@nebular/theme';
+import { Subject } from 'rxjs';
 import { menu } from './dashboardmenu';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,21 +11,14 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit, OnDestroy {
 
-
   constructor(private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
               private themeService: NbThemeService,
-              // private userService: UserData,
-              // private layoutService: LayoutService,
-              private breakpointService: NbMediaBreakpointsService,
-              private route: Router) {
-}
-
+              private breakpointService: NbMediaBreakpointsService ) {}
 
 
   menus =  menu;
   private destroy$: Subject<void> = new Subject<void>();
-  userPictureOnly = false;
   themes = [
     {
       value: 'default',
@@ -42,45 +31,13 @@ export class DashboardComponent implements OnInit, OnDestroy {
     {
       value: 'cosmic',
       name: 'Cosmic',
-    },
-    {
-      value: 'corporate',
-      name: 'Corporate',
-    },
+    }
   ];
 
   currentTheme = 'default';
 
-  protected layoutSize$ = new Subject();
-
-  // onChangeLayoutSize(): Observable<any> {
-  //   return this.layoutSize$.pipe(
-  //     share(),
-  //     delay(1),
-  //   );
-  // }
-
-
   ngOnInit() {
     this.currentTheme = this.themeService.currentTheme;
-
-
-    const { xl } = this.breakpointService.getBreakpointsMap();
-    this.themeService.onMediaQueryChange()
-      .pipe(
-        map(([, currentBreakpoint]) => currentBreakpoint.width < xl),
-        takeUntil(this.destroy$),
-      )
-      .subscribe((isLessThanXl: boolean) => this.userPictureOnly = isLessThanXl);
-
-
-    this.themeService.onThemeChange()
-    .pipe(
-      map(({ name }) => name),
-      takeUntil(this.destroy$),
-    )
-    .subscribe(themeName => this.currentTheme = themeName);
-
   }
 
   ngOnDestroy() {
@@ -92,26 +49,32 @@ export class DashboardComponent implements OnInit, OnDestroy {
     this.themeService.changeTheme(themeName);
   }
 
-  changeLayoutSize() {
-    this.layoutSize$.next();
-  }
-
   toggleSidebar(): boolean {
     this.sidebarService.toggle(true, 'menu-sidebar');
-
-    this.changeLayoutSize();
-
     return false;
+  }
+
+  getselected() {
+    let currentTheme: number;
+    const { xl } = this.breakpointService.getBreakpointsMap();
+
+    this.themeService.onMediaQueryChange().subscribe(
+      ([, value]) => currentTheme = value.width
+    );
+
+    this.menuService.onItemClick().subscribe(
+      value => {
+        currentTheme < xl && value.item.title ?
+        this.sidebarService.collapse('menu-sidebar') :
+        this.sidebarService.expand('menu-sidebar');
+      }
+    );
   }
 
   navigateHome() {
     this.menuService.navigateHome();
     return true;
   }
-
-
-
-
 }
 
 

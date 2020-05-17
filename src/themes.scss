@@ -1,5 +1,7 @@
 @import '~@nebular/theme/styles/theming';
 @import '~@nebular/theme/styles/themes/default';
+@import '~@nebular/theme/styles/themes/dark';
+@import '~@nebular/theme/styles/themes/cosmic';
 $nb-themes: nb-register-theme(( // add your variables here like:
 // color-primary-100: #f2f6ff,
 // color-primary-200: #d9e4ff,
@@ -11,3 +13,5 @@ $nb-themes: nb-register-theme(( // add your variables here like:
 // color-primary-800: #102694,
 // color-primary-900: #091c7a,
 ), default, default);
+$nb-themes: nb-register-theme((), dark, dark);
+$nb-themes: nb-register-theme((), cosmic, cosmic);

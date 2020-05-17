@@ -29,40 +29,28 @@
 
 
 
-    <nb-sidebar class="menu-sidebar" tag="menu-sidebar" Fixed=true responsive state="primary">
+    <nb-sidebar class="menu-sidebar" tag="menu-sidebar" Fixed=true responsive=true state="expanded">
 
-        <nb-menu [items]="menus" autoCollapse="true"></nb-menu>
+        <nb-menu [items]="menus" (click)="getselected()" tag="menu" autoCollapse=true></nb-menu>
 
     </nb-sidebar>
 
 
     <nb-layout-column class="nbmiddle" Fixed=true>
-
-
         <router-outlet></router-outlet>
-
-
-
-
     </nb-layout-column>
 
-    <nb-sidebar containerFixed=true end=true class="nbmiddle2"> </nb-sidebar>
+    <nb-sidebar containerFixed=true end=true class="nbmiddle2" Fixed=true responsive=true state="expanded">
+        i love programming </nb-sidebar>
 
 
 
     <nb-layout-footer fixed>
 
         <span class="created-by">
-        Created with 💝 by <b><a href="https://akveo.page.link/8V2f" target="_blank">   Mecar  
+        Created with 💝 by <b><a href="https://mecarito.github.io/alphaweb/" target="_blank">   Mecar  
         </a></b> 2020
-      </span>
-        <div class="socials">
-            <a href="#" target="_blank" class="ion ion-social-github"></a>
-            <a href="#" target="_blank" class="ion ion-social-facebook"></a>
-            <a href="#" target="_blank" class="ion ion-social-twitter"></a>
-            <a href="#" target="_blank" class="ion ion-social-linkedin"></a>
-        </div>
-
+        </span>
     </nb-layout-footer>
 
 </nb-layout>
