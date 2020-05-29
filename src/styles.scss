@@ -1,8 +1,34 @@
 @import 'themes';
-
+@import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
 @import '~@nebular/theme/styles/globals';
-
 @include nb-install() {
-  @include nb-theme-global();
-};
+    @include nb-theme-global();
+}
+
+.ag-theme-alpine {
+    @include ag-theme-alpine();
+}
+
+.staffbio {
+    background-color: #aeefec;
+    font-size: large;
+}
+
+.educationposition {
+    background-color: #eb4559;
+    font-size: large;
+}
+
+.administration {
+    background-color: #f78259;
+    font-size: large;
+}
+
+.id {
+    background-color: #f3ecb8;
+    font-weight: 600;
+}
+
+
 /* You can add global styles to this file, and also import other style files */

@@ -17,6 +17,6 @@ export class MyprofileService {
   // }
 
   addstaff(bios): Observable<Staffbio> {
-     return this.http.post<Staffbio>(this.staffbiourl, bios);
+      return this.http.post<Staffbio>(this.staffbiourl, bios, {responseType: 'json'});
   }
 }

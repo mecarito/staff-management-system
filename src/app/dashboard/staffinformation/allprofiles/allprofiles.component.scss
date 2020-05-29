@@ -1,18 +1,23 @@
-h5 {
+h6 {
     color: #1DA1F2;
-    margin-bottom: 4vh;
+    margin-bottom: 1vh;
 }
 
 .btn-primary {
-    background-color: #1dA1F2;
-    width: 7vw;
+    width: 8vw;
+    height: 4vh;
+    background-color: #1DA1F2;
+    color: #ffffff;
+    border-radius: 0.6vh;
+    font-weight: 600;
     border: none;
+    margin-bottom: 1vh;
 }
 
 .btn-primary:hover {
     background-color: #1dA1F2;
 }
 
-.th {
-    background-color: #e8e8e8;
-}
+// .th {
+//     background-color: #e8e8e8;
+// }

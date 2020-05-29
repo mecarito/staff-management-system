@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import {  ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -21,10 +22,11 @@ import { PagenotfoundModule } from './pagenotfound/pagenotfound.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+     AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     DashboardModule,
     LoginsignupModule,
     HomeModule,

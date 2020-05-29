@@ -4,29 +4,39 @@
 
         <div class="coverdiv">
             <h3 class="welcometext">Welcome back!</h3>
-            <div class="form-group col-md-6">
-                <label for="inputEmail4">Staff ID Number</label>
-                <input type="text" class="form-control email" id="inputEmail4" placeholder="12564">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control password" id="inputPassword4" placeholder="Password">
-            </div>
-            <div class="form-check ">
-                <input class="form-check-input checkbox" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                              Remember me
-                            </label>
-                <label class="form-check-label forgotpassword" for="gridCheck">
-                                    Forgot Password?
-                            </label>
-            </div>
+            <form [formGroup]="stafform" (ngSubmit)="onSubmit()">
 
-            <button type="button" (click)="navigate()">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Staff ID Number</label>
+                    <input type="text" class="form-control staffid" formControlName="staffid" type="number" id="staffid" placeholder="12564" required>
+                    <div *ngIf="staffid.invalid && (staffid.dirty || staffid.touched)">
+                        <p *ngIf="staffid.errors.required" class="alert">
+                            Staff Id is required
+                        </p>
+                        <p *ngIf="staffid.errors.minlength" class="alert">
+                            Staff Id should be atleast 5 characters
+                        </p>
+                        <p *ngIf="staffid.errors.maxlength" class="alert">
+                            Staff Id should be maximum 5 characters
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control password" formControlName="password" id="inputPassword4" placeholder="Password" required>
+                </div>
+                <div class="form-check ">
+                    <label class="form-check-label forgotpassword" for="gridCheck">
+                                    Forgot Password?
+                </label>
+                </div>
+
+                <button type="submit" [disabled]="!stafform.valid">
                 <a >Login</a></button>
+            </form>
+            <p> {{ stafform.status }}</p>
 
         </div>
-
     </div>
 
 

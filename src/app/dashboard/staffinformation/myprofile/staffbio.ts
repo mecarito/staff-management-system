@@ -12,5 +12,6 @@ export interface Staffbio {
     researchGroup: string;
     officeNo: string;
     administrativeRole: string;
+    response: string;
 
 }

@@ -51,7 +51,7 @@ export class MyprofileComponent implements OnInit {
             };
 
               return this.myprofileservice.addstaff(hodfil).
-              subscribe(data => console.log(data));
+             subscribe(data => alert( data.response) );
    }
 
 }
