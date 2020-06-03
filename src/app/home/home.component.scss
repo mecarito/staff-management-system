@@ -2,7 +2,6 @@
 .container-fluid {
     height: 80vh;
     width: 45vw;
-    margin-top: 10vh;
     margin-bottom: 10vh;
     background-color: #ffffff;
     margin: auto auto;
@@ -21,11 +20,6 @@ h3 {
     font-weight: 550;
 }
 
-// .btn-primary {
-//     background-color: #1DA1F2;
-//     color: white;
-//     margin: 3vh;
-// }
 button {
     background-color: #1DA1F2;
     color: white;
@@ -33,7 +27,6 @@ button {
     height: 6vh;
     width: 8vw;
     border: none;
-    // margin-left: 2vw;
     margin-top: 2vh
 }
 
@@ -52,12 +45,8 @@ a:hover {
 }
 
 body {
-    // display: -ms-flexbox;
     display: flex;
-    // -ms-flex-align: center;
-    // align-items: center;
     background-color: #dedede;
-    /* font-family: 'Source Sans Pro', sans-serif; */
     font-family: 'Source Serif Pro', serif;
     padding: 10vh;
 }
@@ -70,7 +59,6 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4vh;
     height: 10vw;
     width: 8vw;
     background-image: url(../logo_ud.png);
@@ -80,8 +68,6 @@ body {
     .container-fluid {
         height: 80vh;
         width: 100%;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
         background-color: #ffffff;
         margin: auto auto;
     }
@@ -89,18 +75,11 @@ body {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 12vh;
         height: 38vw;
         width: 30vw;
         background-image: url(../logo_ud.png);
     }
     body {
-        // display: -ms-flexbox;
-        // display: flex;
-        // -ms-flex-align: center;
-        // align-items: center;
-        // background-color: #dedede;
-        // /* font-family: 'Source Sans Pro', sans-serif; */
         font-family: 'Source Serif Pro', serif;
         padding: 0;
     }

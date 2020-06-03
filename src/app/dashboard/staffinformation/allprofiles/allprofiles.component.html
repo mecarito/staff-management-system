@@ -4,8 +4,11 @@
 </div> -->
 
 <h6> Select rows then perform necessary operations </h6>
+<div class="form-row">
+    <button class="btn-primary" (click)="getSelectedRows()"> Delete staff </button>
+    <button class="btn-primary" (click)="createmultiple()"> Generate fake data(10) </button>
 
-<button class="btn-primary" (click)="getSelectedRows()"> Delete staff </button>
+</div>
 
 <ag-grid-angular #agGrid style="width: 90vw; height: 70vh; 
 " class="ag-theme-alpine" [rowData]="rowData " [columnDefs]="columnDefs" rowSelection="multiple" [rowMultiSelectWithClick]="true" [pagination]="true" [defaultColDef]="defaultColDef">

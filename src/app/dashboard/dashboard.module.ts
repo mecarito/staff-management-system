@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { DashboardComponent } from './dashboard.component';
 import { TeachingloadModule } from './teachingload/teachingload.module';
 import { StaffinformationModule } from './staffinformation/staffinformation.module';

@@ -1,11 +1,7 @@
 @import '~@nebular/theme/styles/global/breakpoints';
 body {
-    // display: -ms-flexbox;
     display: flex;
-    // -ms-flex-align: center;
-    // align-items: center;
     background-color: #dedede;
-    /* font-family: 'Source Sans Pro', sans-serif; */
     font-family: 'Source Serif Pro', serif;
     padding: 10vh;
 }
@@ -15,27 +11,10 @@ body {
     width: 40vw;
     margin-top: 10vh;
     margin-bottom: 10vh;
-    /* background-size: cover; */
     background-color: #ffffff;
     margin: auto auto;
 }
 
-
-/* 
-.container-fluid1 {
-    height: 80vh;
-    width: 38.9vw;
-    display: inline-block;
-    background-image: url(../../images/coco.jpg);
-    background-size: cover;
-} */
-
-// .container-fluid2 {
-//     height: 80vh;
-//     width: 39vw;
-//     background-color: #ffffff;
-//     display: inline-block;
-// }
 button {
     background-color: #1DA1F2;
     color: white;
@@ -53,7 +32,6 @@ button {
     margin-left: 1vw;
     margin-top: 4vh;
     margin-bottom: 6vh;
-    /* font-weight: bold; */
 }
 
 .forgotpassword {
@@ -69,12 +47,12 @@ button {
 
 .email {
     width: 19vw;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
 }
 
 .password {
     width: 19vw;
-    margin-bottom: 6vh;
+    margin-bottom: 3vh;
 }
 
 @include media-breakpoint-down(sm) {
@@ -85,14 +63,9 @@ button {
         margin-bottom: 10vh;
         background-color: #ffffff;
         margin: auto auto;
+        padding: 0, 5vh, 0, 5vh
     }
     body {
-        // display: -ms-flexbox;
-        // display: flex;
-        // -ms-flex-align: center;
-        // align-items: center;
-        // background-color: #dedede;
-        // /* font-family: 'Source Sans Pro', sans-serif; */
         font-family: 'Source Serif Pro', serif;
         padding: 0;
     }
@@ -107,14 +80,17 @@ button {
         margin-top: 2vh
     }
     .email {
-        width: 45vw;
+        width: 55vw;
         margin-bottom: 5vh;
     }
     .password {
-        width: 45vw;
-        margin-bottom: 6vh;
+        width: 55vw;
+        margin-bottom: 3vh;
     }
     .link {
         margin-left: 25vw;
+    }
+    .forgotpassword {
+        margin-left: 12.5vw;
     }
 }

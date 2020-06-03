@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { NbMediaBreakpointsService, NbMenuService,
          NbSidebarService, NbThemeService } from '@nebular/theme';
 import { Subject } from 'rxjs';
@@ -7,6 +7,7 @@ import { menu } from './dashboardmenu';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit, OnDestroy {
@@ -58,6 +59,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
     let currentTheme: number;
     const { xl } = this.breakpointService.getBreakpointsMap();
 
+    console.log( this.breakpointService.getBreakpointsMap());
     this.themeService.onMediaQueryChange().subscribe(
       ([, value]) => currentTheme = value.width
     );

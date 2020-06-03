@@ -1,11 +1,7 @@
 @import '~@nebular/theme/styles/global/breakpoints';
 body {
-    // display: -ms-flexbox;
     display: flex;
-    // -ms-flex-align: center;
-    // align-items: center;
     background-color: #dedede;
-    /* font-family: 'Source Sans Pro', sans-serif; */
     font-family: 'Source Serif Pro', serif;
     padding: 10vh;
 }
@@ -15,26 +11,10 @@ body {
     width: 40vw;
     margin-top: 10vh;
     margin-bottom: 10vh;
-    /* background-size: cover; */
     background-color: #ffffff;
     margin: auto auto;
 }
 
-
-/* .container-fluid1 {
-    height: 80vh;
-    width: 38.9vw;
-    display: inline-block;
-    background-image: url(../../images/coco.jpg);
-    background-size: cover;
-} */
-
-// .container-fluid2 {
-//     height: 80vh;
-//     width: 39vw;
-//     background-color: #ffffff;
-//     display: inline-block;
-// }
 button {
     background-color: #1DA1F2;
     color: white;
@@ -54,10 +34,6 @@ button {
     margin-left: 5vw;
 }
 
-// .coverdiv {
-//     margin-left: 1vw;
-//     margin-top: 6vh;
-// }
 .email {
     width: 30vw;
     margin-bottom: 2vh;
@@ -103,15 +79,9 @@ button {
         margin-bottom: 10vh;
         background-color: #ffffff;
         margin: auto auto;
-        // padding: 10vw;
+        padding: 0, 10vh, 0, 10vh
     }
     body {
-        // display: -ms-flexbox;
-        // display: flex;
-        // -ms-flex-align: center;
-        // align-items: center;
-        // background-color: #dedede;
-        // /* font-family: 'Source Sans Pro', sans-serif; */
         font-family: 'Source Serif Pro', serif;
         padding: 0;
     }

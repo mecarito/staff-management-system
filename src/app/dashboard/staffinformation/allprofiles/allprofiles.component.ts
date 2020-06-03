@@ -61,6 +61,7 @@ defaultColDef = {
 };
 
 url =  'http://localhost:3000/staffinfo';
+multipleurl = 'http://localhost:3000/staffinfo/multiple';
 
   ngOnInit(): void {
     this.http.get(this.url).subscribe(
@@ -68,6 +69,10 @@ url =  'http://localhost:3000/staffinfo';
     );
   }
 
+  createmultiple() {
+      this.http.post<Staffbio>( this.multipleurl, {}, { responseType: 'json'}).
+      subscribe( value => alert( value.response ) );
+  }
 
   getSelectedRows() {
     const selectedNodes = this.agGrid.api.getSelectedNodes();
@@ -78,9 +83,6 @@ url =  'http://localhost:3000/staffinfo';
       subscribe( val =>  {alert(val.response);
                           this.agGrid.api.removeItems(selectedNodes); } ) :
      alert('select atleast 1 staff member');
-
-
-    // console.log(this.agGrid.api.getSelectedRows());
 
 }
 
