@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
 import { HttpClient } from '@angular/common/http';
-import { Staffbio } from './../myprofile/staffbio';
+import { Staffbio } from './../Addstaffinfo/staffbio';
 
 
 @Component({

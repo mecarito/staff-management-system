@@ -17,9 +17,14 @@ export const menu: NbMenuItem[] = [
         link: '',
         children: [
           {
-            title: 'My Profile',
+            title: 'Add staff info',
+            link: 'staffinformation/addstaffinfo',
+          },
+          {
+            title: 'Myprofile',
             link: 'staffinformation/myprofile',
           },
+
           {
             title: 'All Profiles',
             link: 'staffinformation/allprofiles',

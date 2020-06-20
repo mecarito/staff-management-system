@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { DashboardhomeComponent } from './dashboard/dashboardhome/dashboardhome.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StaffloginComponent } from './logins/stafflogin/stafflogin.component';
-import { MyprofileComponent } from './dashboard/staffinformation/myprofile/myprofile.component';
+import { AddstaffinfoComponent } from './dashboard/staffinformation/Addstaffinfo/Addstaffinfo.component';
 import { AllprofilesComponent } from './dashboard/staffinformation/allprofiles/allprofiles.component';
 import { UploadreportComponent } from './dashboard/reports/uploadreport/uploadreport.component';
 import { MonthlyreportsComponent } from './dashboard/reports/monthlyreports/monthlyreports.component';
@@ -36,6 +36,7 @@ import { SettingsComponent } from './dashboard/settings/settings.component';
 import { GuestloginComponent } from './logins/guestlogin/guestlogin.component';
 import { StudentloginComponent } from './logins/studentlogin/studentlogin.component';
 import { GuestsignupComponent } from './logins/guestsignup/guestsignup.component';
+import { MyprofileComponent } from './dashboard/staffinformation/myprofile/myprofile.component';
 
 
 const routes: Routes = [
@@ -48,6 +49,7 @@ const routes: Routes = [
 
   {path: 'dashboard', component: DashboardComponent,
   children: [
+  {path: 'staffinformation/addstaffinfo', component: AddstaffinfoComponent},
   {path: 'staffinformation/myprofile', component: MyprofileComponent},
   {path: 'staffinformation/allprofiles', component: AllprofilesComponent},
   {path: 'dashhome', component: DashboardhomeComponent},
